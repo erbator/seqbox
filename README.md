@@ -8,9 +8,7 @@
 ![Quickshell](https://img.shields.io/badge/Quickshell-QML-41CD52?style=flat-square&logo=qt&logoColor=white)
 ![CachyOS](https://img.shields.io/badge/CachyOS-Arch-1793D1?style=flat-square&logo=archlinux&logoColor=white)
 
-<img src="assets/screenshots/main-dark-dashboard.webp" alt="Main flavour, dark mode, with the dashboard open" width="100%">
-
-<sub>The dashboard (<kbd>Super</kbd> + <kbd>Tab</kbd>): power menu, app shortcuts, clock, media controls, brightness and a live GitHub contribution graph.</sub>
+<img src="assets/screenshots/pixel-dark-terminals.webp" alt="Pixel flavour, dark mode: btop, fastfetch and Neovim over a pixel-art castle" width="100%">
 
 **[Main](#main)** · **[Pixel](#pixel)** · **[Warm](#warm)** · **[Install](#installation)** · **[Keybinds](#keybinds)**
 
@@ -50,10 +48,12 @@ mode an ink drawing of crows.
     <td align="center"><sub><b>Light:</b> the same windows after <code>theme.sh light</code></sub></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="assets/screenshots/main-light-apps.webp" alt="Main light: Brave, Thunar and small kitty windows"></td>
+    <td width="50%"><img src="assets/screenshots/main-dark-dashboard.webp" alt="Main dark with the dashboard open"></td>
+    <td width="50%"><img src="assets/screenshots/main-light-apps.webp" alt="Main light: Brave, Thunar and small kitty windows"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><sub>Brave and Thunar pick up the GTK colours. The small kitty windows float on top.</sub></td>
+    <td align="center"><sub><b>Dashboard</b> (<kbd>Super</kbd> + <kbd>Tab</kbd>): power menu, shortcuts, clock, media controls, brightness and a GitHub contribution graph</sub></td>
+    <td align="center"><sub><b>Light:</b> Brave and Thunar pick up the GTK colours, with small kitty windows floating on top</sub></td>
   </tr>
 </table>
 
