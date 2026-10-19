@@ -10,7 +10,7 @@
 
 <img src="assets/screenshots/pixel-dark-terminals.webp" alt="Pixel flavour, dark mode: btop, fastfetch and Neovim over a pixel-art castle" width="100%">
 
-**[Screenshots](#screenshots)** · **[Usage](#usage)** · **[About](#about)** · **[Install](#installation)** · **[Credits](#credits)**
+**[Screenshots](#screenshots)** · **[Usage](#usage)** · **[Install](#installation)** · **[Credits](#credits)**
 
 </div>
 
@@ -20,31 +20,18 @@
 
 ### Main
 
-Rounded windows with soft shadows. The dark mode uses the Pink Floyd prism, the light
-mode an ink drawing of crows.
-
 <table>
   <tr>
     <td width="50%"><img src="assets/screenshots/main-dark-terminals.webp" alt="Main dark: btop, fastfetch and Neovim"></td>
     <td width="50%"><img src="assets/screenshots/main-light-terminals.webp" alt="Main light: btop, fastfetch and Neovim"></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>Dark:</b> btop, fastfetch and Neovim with neo-tree, all in kitty</sub></td>
-    <td align="center"><sub><b>Light:</b> the same windows after <code>theme.sh light</code></sub></td>
-  </tr>
-  <tr>
     <td width="50%"><img src="assets/screenshots/main-dark-dashboard.webp" alt="Main dark with the dashboard open"></td>
     <td width="50%"><img src="assets/screenshots/main-light-apps.webp" alt="Main light: Brave, Thunar and small kitty windows"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub><b>Dashboard</b> (<kbd>Super</kbd> + <kbd>Tab</kbd>): power menu, shortcuts, clock, media controls, brightness and a GitHub contribution graph</sub></td>
-    <td align="center"><sub><b>Light:</b> Brave and Thunar pick up the GTK colours, with small kitty windows floating on top</sub></td>
   </tr>
 </table>
 
 ### Pixel
-
-Square corners, 1px borders and hard 9px drop shadows, with a pixel-art bar to match.
 
 <table>
   <tr>
@@ -52,93 +39,32 @@ Square corners, 1px borders and hard 9px drop shadows, with a pixel-art bar to m
     <td width="50%"><img src="assets/screenshots/pixel-dark-apps.webp" alt="Pixel dark: Brave and Thunar over a pixel-art castle"></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>Dark:</b> terminals over the pixel-art castle</sub></td>
-    <td align="center"><sub><b>Dark:</b> Brave and Thunar in the dark GTK theme</sub></td>
-  </tr>
-  <tr>
     <td width="50%"><img src="assets/screenshots/pixel-light-terminals.webp" alt="Pixel light: btop, fastfetch and Neovim"></td>
     <td width="50%"><img src="assets/screenshots/pixel-light-apps.webp" alt="Pixel light: Brave and Thunar"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub><b>Light:</b> terminals</sub></td>
-    <td align="center"><sub><b>Light:</b> Brave and Thunar</sub></td>
   </tr>
 </table>
 
 ### Warm
-
-Peach and brown on a retro striped wallpaper, with thick rounded borders.
 
 <table>
   <tr>
     <td width="50%"><img src="assets/screenshots/warm-terminals.webp" alt="Warm: btop, fastfetch and Neovim on a striped wallpaper"></td>
     <td width="50%"><img src="assets/screenshots/warm-apps.webp" alt="Warm: Brave and Thunar on a striped wallpaper"></td>
   </tr>
-  <tr>
-    <td align="center"><sub>btop, fastfetch and Neovim</sub></td>
-    <td align="center"><sub>Brave, Thunar and floating kitty windows</sub></td>
-  </tr>
 </table>
 
 ### Light on resources
 
-The main flavour on a budget laptop: an Intel Core i3-10110U with integrated graphics,
-8 GB of RAM and a 1080p 60Hz screen.
+**1.2 GB RAM · 7.4 W on battery** on an i3-10110U laptop with 8 GB of RAM.
 
 <img src="assets/screenshots/laptop-resources.webp" alt="Main flavour on a laptop: btop showing 1.2 GiB of RAM in use and fastfetch" width="100%">
 
-Measured a few minutes after login, with btop and fastfetch open in kitty:
-
-| | |
-| --- | --- |
-| **RAM in use** | 1.16 GiB of 7.49 GiB (15%) |
-| **CPU load** | 0.29 (1-minute average) |
-| **Power draw** | 7.4 W on battery |
-| **Hyprland** | 181 MB |
-| **Quickshell bar** | 251 MB |
-| **Packages** | 823 |
-
 ## Usage
 
-### Switching mode and flavour
-
-Click the moon/sun button at the bottom of the bar to flip between light and dark, or
-run the scripts yourself:
-
 ```sh
-~/.config/rumda/scripts/theme.sh light|dark      # switch mode
-~/.config/rumda/scripts/flavour.sh main|pixel|warm  # switch flavour
+~/.config/rumda/scripts/theme.sh light|dark         # or the moon/sun button on the bar
+~/.config/rumda/scripts/flavour.sh main|pixel|warm
 ```
-
-### Scripts
-
-Everything lives in `~/.config/rumda/scripts`.
-
-| Script | Does |
-| --- | --- |
-| `theme.sh` | Switches kitty, Neovim, rofi, GTK, the system colour scheme, Hyprland colours and the wallpaper |
-| `flavour.sh` | Swaps the Quickshell bar and Hyprland look. Runs at login to start the saved flavour |
-| `wall.sh` / `wallcycle.sh` | Sets or cycles the wallpaper for the current mode |
-| `screenshot.sh` / `qscreen.sh` / `delayedScreenshot.sh` | Screenshots |
-| `screenrec.sh` | Screen recording (full screen or region) |
-| `ocr.sh` | Text recognition from a screen region |
-| `zoom_toggle.sh` · `vibrance.sh` | Screen zoom and a colour vibrance shader |
-
-The active mode and flavour are saved in `~/.cache/rumda-theme` and
-`~/.cache/rumda-flavour`.
-
-### Dashboard
-
-Press <kbd>Super</kbd> + <kbd>Tab</kbd> to open the dashboard. It has:
-
-- power buttons: shut down, reboot, log out and lock
-- shortcuts to the file manager, browser, terminal and a delayed screenshot
-- a clock, media controls and a brightness slider
-- your GitHub contribution graph
-
-### Keybinds
-
-`Super` is the main modifier.
 
 | Keys | Action |
 | --- | --- |
@@ -161,83 +87,18 @@ Press <kbd>Super</kbd> + <kbd>Tab</kbd> to open the dashboard. It has:
 | `Super + Shift + R` | Record screen (`Alt` instead of `Shift` for a region) |
 | `Super + M` | Exit Hyprland |
 
-## About
-
-This is my copy of [**rumda**](https://github.com/hexonide/rumda), the cat rice by
-[@hexonide](https://github.com/hexonide), with my own tweaks on top. Almost all of the look,
-the Quickshell bar and dashboard, the flavours and the theme scripts come from rumda.
-
-rumda recolours the whole system at once: Quickshell bar, Hyprland, kitty, Neovim, btop, rofi, GTK apps, Brave,
-Discord, Spotify and the wallpaper.
-
-- **Modes:** `light` and `dark`
-- **Flavours:** `main`, `pixel` and `warm`, each with its own bar, window style and wallpaper
-
-The vertical bar on the left, with Rumda the cat sitting on top, holds:
-
-- **Top:** clock, volume, CPU and RAM rings
-- **Middle:** workspaces
-- **Bottom:** light/dark switch, weather, network and power
-
-### Setup
-
-| | |
-| --- | --- |
-| **OS** | CachyOS (Arch) |
-| **WM** | Hyprland, configured in Lua |
-| **Bar / widgets** | Quickshell |
-| **Terminal** | kitty |
-| **Shell** | zsh + starship |
-| **Editor** | Neovim |
-| **Launcher** | rofi |
-| **File manager** | Thunar |
-| **Wallpaper** | awww |
-| **Font** | Terminess Nerd Font |
-| **Icons** | Papirus |
-
-### Contents
-
-The repo mirrors `$HOME`.
-
-| Path | Contents |
-| --- | --- |
-| `.config/hypr` | Hyprland config, split into modules (binds, rules, look, monitors, …) |
-| `.config/quickshell` | Bar, dashboard and widgets, light and dark |
-| `.config/rumda` | Theme and flavour switcher, scripts, wallpapers, shaders |
-| `.config/kitty` | Terminal config and themes |
-| `.config/nvim` | Neovim config with the rumda colourscheme |
-| `.config/rofi` | Launcher themes for every flavour and mode |
-| `.zshrc` | zsh with fzf-tab, autosuggestions, zoxide |
-| `.config/starship.toml` | Prompt |
-| `.config/equibop` | Discord client settings and the system24 ember theme |
-| `.config/spicetify` | Spotify theme |
-| `.config/gtk-3.0` · `.config/gtk-4.0` | GTK settings and colours |
-| `.local/share/themes` | The `rumda-dark` and `rumda-light` GTK themes (built on adw-gtk3) |
-| `.config/fastfetch` · `btop` · `eza` · `swappy` · `fontconfig` | Smaller tool configs |
-
 ## Installation
 
-For Arch-based systems (I use CachyOS) with [paru](https://github.com/Morganamilo/paru).
-
-> [!WARNING]
-> Back up your own configs first. Copying overwrites files with the same name.
-
-### 1. Install the packages
+For Arch-based systems with [paru](https://github.com/Morganamilo/paru) and Hyprland 0.56+.
+Back up your configs first.
 
 ```sh
-paru -S --needed git hyprland quickshell kitty neovim rofi thunar zsh starship \
-  awww grim slurp swappy wl-clipboard wf-recorder tesseract tesseract-data-eng libnotify \
-  brightnessctl playerctl fastfetch btop eza bat ripgrep fzf zoxide direnv \
-  zsh-autosuggestions fzf-tab ttf-terminus-nerd papirus-icon-theme adw-gtk-theme \
-  equibop spicetify-cli spotify brave-bin
+paru -S --needed git hyprland quickshell qt6-5compat kitty neovim tree-sitter-cli rofi thunar \
+  zsh starship awww grim slurp swappy wl-clipboard wf-recorder tesseract tesseract-data-eng \
+  libnotify brightnessctl playerctl fastfetch btop eza bat ripgrep fzf zoxide direnv \
+  zsh-autosuggestions fzf-tab ttf-terminus-nerd papirus-icon-theme adw-gtk-theme
 chsh -s /usr/bin/zsh
-```
 
-The Hyprland config is written in Lua, so it needs Hyprland 0.56 or newer.
-
-### 2. Copy the files
-
-```sh
 git clone https://github.com/erbator/seqbox.git ~/Documents/seqbox
 cd ~/Documents/seqbox
 cp -r .config/. ~/.config/
@@ -245,41 +106,15 @@ cp .zshrc ~/
 mkdir -p ~/.local/share && cp -r .local/share/themes ~/.local/share/
 ```
 
-To take only one app, copy just its folder, e.g. `cp -r .config/kitty ~/.config/`.
+Then adjust:
 
-The pixel flavour uses the [Dogica](https://rmocci.itch.io/dogica) font, which isn't
-included here. Put it in `~/.local/share/fonts` and run `fc-cache -f`.
+- `~/.config/hypr/modules/monitors.lua`: set `mode` to `"preferred"` or your own mode
+- `~/.config/hypr/modules/input.lua`: keyboard layout is `hu`
 
-### 3. Adjust for your screen
-
-| File | Change |
-| --- | --- |
-| `~/.config/hypr/modules/monitors.lua` | `mode = "1920x1080@144"` → `mode = "preferred"` (or your own resolution and refresh rate) |
-| `~/.config/quickshell/shared/ScreenConf.qml` | Set `screenWidth: 1920` to your screen width, or the bar and dashboard will be sized wrong |
-| `~/.config/hypr/modules/input.lua` | Keyboard layout is `hu`. Change `kb_layout` if yours differs |
-| `~/.config/spicetify/config-xpui.ini` | Replace `/home/gegu` in `prefs_path` with your home folder |
-
-### 4. Start it up
-
-Log in to Hyprland. The bar starts on its own. Then pick a flavour and a mode:
-
-```sh
-~/.config/rumda/scripts/flavour.sh main   # or pixel / warm
-~/.config/rumda/scripts/theme.sh dark     # or light
-```
-
-**Spotify:** open Spotify once and close it, then:
-
-```sh
-sudo chmod a+wr /opt/spotify /opt/spotify/Apps -R
-spicetify backup apply
-```
-
-**Discord:** in Equibop, go to Settings → Themes and enable `system24-ember`.
+Log in to Hyprland and run `flavour.sh main` and `theme.sh dark`.
+The pixel flavour needs the [Dogica](https://rmocci.itch.io/dogica) font in `~/.local/share/fonts`.
 
 ## Credits
 
-- **[hexonide/rumda](https://github.com/hexonide/rumda):** the original rice. The
-  Quickshell bar and dashboard, Rumda the cat, the flavours, the colour schemes and the
-  scripts in `.config/rumda` are hexonide's work. Go star it.
+- **[hexonide/rumda](https://github.com/hexonide/rumda):** the original rice: the bar, dashboard, Rumda the cat, the flavours and the scripts. Go star it.
 - The system24 Discord theme is by [refact0r](https://github.com/refact0r/system24).
