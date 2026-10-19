@@ -2,7 +2,7 @@
 
 # seqbox
 
-**My Hyprland dotfiles, themed with rumda**
+**My Hyprland setup, based on [rumda](https://github.com/hexonide/rumda) by [@hexonide](https://github.com/hexonide)**
 
 ![Hyprland](https://img.shields.io/badge/Hyprland-Lua-58E1FF?style=flat-square&logo=hyprland&logoColor=white)
 ![Quickshell](https://img.shields.io/badge/Quickshell-QML-41CD52?style=flat-square&logo=qt&logoColor=white)
@@ -10,28 +10,13 @@
 
 <img src="assets/screenshots/pixel-dark-terminals.webp" alt="Pixel flavour, dark mode: btop, fastfetch and Neovim over a pixel-art castle" width="100%">
 
-**[Main](#main)** · **[Pixel](#pixel)** · **[Warm](#warm)** · **[Install](#installation)** · **[Keybinds](#keybinds)**
+**[Screenshots](#screenshots)** · **[Usage](#usage)** · **[About](#about)** · **[Install](#installation)** · **[Credits](#credits)**
 
 </div>
 
 ---
 
-## Overview
-
-A Hyprland desktop built around **rumda**, a set of scripts that recolours the whole
-system at once: Quickshell bar, Hyprland, kitty, Neovim, btop, rofi, GTK apps, Brave,
-Discord, Spotify and the wallpaper.
-
-- **Modes:** `light` and `dark`
-- **Flavours:** `main`, `pixel` and `warm`, each with its own bar, window style and wallpaper
-
-The vertical bar on the left, with Rumda the cat sitting on top, holds:
-
-- **Top:** clock, volume, CPU and RAM rings
-- **Middle:** workspaces
-- **Bottom:** light/dark switch, weather, network and power
-
-## Flavours
+## Screenshots
 
 ### Main
 
@@ -95,7 +80,88 @@ Peach and brown on a retro striped wallpaper, with thick rounded borders.
   </tr>
 </table>
 
-## Setup
+## Usage
+
+### Switching mode and flavour
+
+Click the moon/sun button at the bottom of the bar to flip between light and dark, or
+run the scripts yourself:
+
+```sh
+~/.config/rumda/scripts/theme.sh light|dark      # switch mode
+~/.config/rumda/scripts/flavour.sh main|pixel|warm  # switch flavour
+```
+
+### Scripts
+
+Everything lives in `~/.config/rumda/scripts`.
+
+| Script | Does |
+| --- | --- |
+| `theme.sh` | Switches kitty, Neovim, rofi, GTK, the system colour scheme, Hyprland colours and the wallpaper |
+| `flavour.sh` | Swaps the Quickshell bar and Hyprland look. Runs at login to start the saved flavour |
+| `wall.sh` / `wallcycle.sh` | Sets or cycles the wallpaper for the current mode |
+| `screenshot.sh` / `qscreen.sh` / `delayedScreenshot.sh` | Screenshots |
+| `screenrec.sh` | Screen recording (full screen or region) |
+| `ocr.sh` | Text recognition from a screen region |
+| `zoom_toggle.sh` · `vibrance.sh` | Screen zoom and a colour vibrance shader |
+
+The active mode and flavour are saved in `~/.cache/rumda-theme` and
+`~/.cache/rumda-flavour`.
+
+### Dashboard
+
+Press <kbd>Super</kbd> + <kbd>Tab</kbd> to open the dashboard. It has:
+
+- power buttons: shut down, reboot, log out and lock
+- shortcuts to the file manager, browser, terminal and a delayed screenshot
+- a clock, media controls and a brightness slider
+- your GitHub contribution graph
+
+### Keybinds
+
+`Super` is the main modifier.
+
+| Keys | Action |
+| --- | --- |
+| `Super + Return` | Terminal |
+| `Super + D` | App launcher |
+| `Super + E` | File manager |
+| `Super + Q` | Close window |
+| `Super + F` | Fullscreen |
+| `Super + U` | Toggle floating |
+| `Super + J` | Toggle split |
+| `Super + Tab` | Dashboard |
+| `Super + W` | Next wallpaper |
+| `Super + Z` | Zoom |
+| `Super + S` | Scratchpad (`Shift` to move a window there) |
+| `Super + 1…0` | Workspace (`Shift` to move a window there) |
+| `Super + arrows` | Move focus |
+| `Print` | Region screenshot to clipboard |
+| `Super + Print` | Region screenshot into swappy |
+| `Super + Shift + T` | OCR a region to clipboard |
+| `Super + Shift + R` | Record screen (`Alt` instead of `Shift` for a region) |
+| `Super + M` | Exit Hyprland |
+
+## About
+
+This is my copy of [**rumda**](https://github.com/hexonide/rumda), the cat rice by
+[@hexonide](https://github.com/hexonide), with my own tweaks on top. Almost all of the look,
+the Quickshell bar and dashboard, the flavours and the theme scripts come from rumda.
+
+rumda recolours the whole system at once: Quickshell bar, Hyprland, kitty, Neovim, btop, rofi, GTK apps, Brave,
+Discord, Spotify and the wallpaper.
+
+- **Modes:** `light` and `dark`
+- **Flavours:** `main`, `pixel` and `warm`, each with its own bar, window style and wallpaper
+
+The vertical bar on the left, with Rumda the cat sitting on top, holds:
+
+- **Top:** clock, volume, CPU and RAM rings
+- **Middle:** workspaces
+- **Bottom:** light/dark switch, weather, network and power
+
+### Setup
 
 | | |
 | --- | --- |
@@ -111,7 +177,7 @@ Peach and brown on a retro striped wallpaper, with thick rounded borders.
 | **Font** | Terminess Nerd Font |
 | **Icons** | Papirus |
 
-## Contents
+### Contents
 
 The repo mirrors `$HOME`.
 
@@ -156,52 +222,9 @@ paru -S --needed hyprland quickshell kitty neovim rofi thunar zsh starship \
   equibop spicetify-cli
 ```
 
-## Keybinds
+## Credits
 
-`Super` is the main modifier.
-
-| Keys | Action |
-| --- | --- |
-| `Super + Return` | Terminal |
-| `Super + D` | App launcher |
-| `Super + E` | File manager |
-| `Super + Q` | Close window |
-| `Super + F` | Fullscreen |
-| `Super + U` | Toggle floating |
-| `Super + J` | Toggle split |
-| `Super + Tab` | Dashboard |
-| `Super + W` | Next wallpaper |
-| `Super + Z` | Zoom |
-| `Super + S` | Scratchpad (`Shift` to move a window there) |
-| `Super + 1…0` | Workspace (`Shift` to move a window there) |
-| `Super + arrows` | Move focus |
-| `Print` | Region screenshot to clipboard |
-| `Super + Print` | Region screenshot into swappy |
-| `Super + Shift + T` | OCR a region to clipboard |
-| `Super + Shift + R` | Record screen (`Alt` instead of `Shift` for a region) |
-| `Super + M` | Exit Hyprland |
-
-## rumda
-
-```sh
-~/.config/rumda/scripts/theme.sh light|dark      # switch mode
-~/.config/rumda/scripts/flavour.sh main|pixel|warm  # switch flavour
-```
-
-| Script | Does |
-| --- | --- |
-| `theme.sh` | Switches kitty, Neovim, rofi, GTK, the system colour scheme, Hyprland colours and the wallpaper |
-| `flavour.sh` | Swaps the Quickshell bar and Hyprland look. Runs at login to start the saved flavour |
-| `wall.sh` / `wallcycle.sh` | Sets or cycles the wallpaper for the current mode |
-| `screenshot.sh` / `qscreen.sh` / `delayedScreenshot.sh` | Screenshots |
-| `screenrec.sh` | Screen recording (full screen or region) |
-| `ocr.sh` | Text recognition from a screen region |
-| `zoom_toggle.sh` · `vibrance.sh` | Screen zoom and a colour vibrance shader |
-
-The active mode and flavour are saved in `~/.cache/rumda-theme` and
-`~/.cache/rumda-flavour`.
-
-> [!NOTE]
-> Switching theme rewrites a few tracked files (`kitty/current-theme.conf`,
-> `rofi/current.rasi`, `gtk-4.0/gtk.css`, `gtk-*/settings.ini`), so they show up in
-> `git status` after a switch.
+- **[hexonide/rumda](https://github.com/hexonide/rumda):** the original rice. The
+  Quickshell bar and dashboard, Rumda the cat, the flavours, the colour schemes and the
+  scripts in `.config/rumda` are hexonide's work. Go star it.
+- The system24 Discord theme is by [refact0r](https://github.com/refact0r/system24).
