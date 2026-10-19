@@ -8,6 +8,12 @@
 ![Quickshell](https://img.shields.io/badge/Quickshell-QML-41CD52?style=flat-square&logo=qt&logoColor=white)
 ![CachyOS](https://img.shields.io/badge/CachyOS-Arch-1793D1?style=flat-square&logo=archlinux&logoColor=white)
 
+<img src="assets/screenshots/main-dark-dashboard.webp" alt="Main flavour, dark mode, with the dashboard open" width="100%">
+
+<sub>The dashboard (<kbd>Super</kbd> + <kbd>Tab</kbd>): power menu, app shortcuts, clock, media controls, brightness and a live GitHub contribution graph.</sub>
+
+**[Main](#main)** · **[Pixel](#pixel)** · **[Warm](#warm)** · **[Install](#installation)** · **[Keybinds](#keybinds)**
+
 </div>
 
 ---
@@ -15,11 +21,81 @@
 ## Overview
 
 A Hyprland desktop built around **rumda**, a set of scripts that recolours the whole
-system at once: Quickshell bar, Hyprland, kitty, Neovim, rofi, GTK apps, Discord and
-the wallpaper.
+system at once: Quickshell bar, Hyprland, kitty, Neovim, btop, rofi, GTK apps, Brave,
+Discord, Spotify and the wallpaper.
 
 - **Modes:** `light` and `dark`
-- **Flavours:** `main`, `pixel` and `warm`, each with its own bar, look and wallpaper
+- **Flavours:** `main`, `pixel` and `warm`, each with its own bar, window style and wallpaper
+
+The vertical bar on the left, with Rumda the cat sitting on top, holds:
+
+- **Top:** clock, volume, CPU and RAM rings
+- **Middle:** workspaces
+- **Bottom:** light/dark switch, weather, network and power
+
+## Flavours
+
+### Main
+
+Rounded windows with soft shadows. The dark mode uses the Pink Floyd prism, the light
+mode an ink drawing of crows.
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/main-dark-terminals.webp" alt="Main dark: btop, fastfetch and Neovim"></td>
+    <td width="50%"><img src="assets/screenshots/main-light-terminals.webp" alt="Main light: btop, fastfetch and Neovim"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Dark:</b> btop, fastfetch and Neovim with neo-tree, all in kitty</sub></td>
+    <td align="center"><sub><b>Light:</b> the same windows after <code>theme.sh light</code></sub></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="assets/screenshots/main-light-apps.webp" alt="Main light: Brave, Thunar and small kitty windows"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><sub>Brave and Thunar pick up the GTK colours. The small kitty windows float on top.</sub></td>
+  </tr>
+</table>
+
+### Pixel
+
+Square corners, 1px borders and hard 9px drop shadows, with a pixel-art bar to match.
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/pixel-dark-terminals.webp" alt="Pixel dark: btop, fastfetch and Neovim over a pixel-art castle"></td>
+    <td width="50%"><img src="assets/screenshots/pixel-dark-apps.webp" alt="Pixel dark: Brave and Thunar over a pixel-art castle"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Dark:</b> terminals over the pixel-art castle</sub></td>
+    <td align="center"><sub><b>Dark:</b> Brave and Thunar in the dark GTK theme</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/pixel-light-terminals.webp" alt="Pixel light: btop, fastfetch and Neovim"></td>
+    <td width="50%"><img src="assets/screenshots/pixel-light-apps.webp" alt="Pixel light: Brave and Thunar"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Light:</b> terminals</sub></td>
+    <td align="center"><sub><b>Light:</b> Brave and Thunar</sub></td>
+  </tr>
+</table>
+
+### Warm
+
+Peach and brown on a retro striped wallpaper, with thick rounded borders.
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/warm-terminals.webp" alt="Warm: btop, fastfetch and Neovim on a striped wallpaper"></td>
+    <td width="50%"><img src="assets/screenshots/warm-apps.webp" alt="Warm: Brave and Thunar on a striped wallpaper"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>btop, fastfetch and Neovim</sub></td>
+    <td align="center"><sub>Brave, Thunar and floating kitty windows</sub></td>
+  </tr>
+</table>
+
+## Setup
 
 | | |
 | --- | --- |
