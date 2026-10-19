@@ -29,6 +29,6 @@
     "appBadge": true,
     "badgeOnlyForMentions": false,
     "transparencyOption": "none",
-    "splashColor": "rgb(212, 213, 216)",
-    "splashBackground": "rgb(0, 0, 0)"
+    "splashColor": "rgb(240, 201, 151)",
+    "splashBackground": "rgb(28, 22, 18)"
 }
