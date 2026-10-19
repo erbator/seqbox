@@ -7,7 +7,6 @@
 ![Hyprland](https://img.shields.io/badge/Hyprland-Lua-58E1FF?style=flat-square&logo=hyprland&logoColor=white)
 ![Quickshell](https://img.shields.io/badge/Quickshell-QML-41CD52?style=flat-square&logo=qt&logoColor=white)
 ![CachyOS](https://img.shields.io/badge/CachyOS-Arch-1793D1?style=flat-square&logo=archlinux&logoColor=white)
-![GNU Stow](https://img.shields.io/badge/managed%20with-GNU%20Stow-A42E2B?style=flat-square&logo=gnu&logoColor=white)
 
 </div>
 
@@ -36,52 +35,40 @@ the wallpaper.
 | **Font** | Terminess Nerd Font |
 | **Icons** | Papirus |
 
-## Packages
+## Contents
 
-Each top-level folder is a [GNU Stow](https://www.gnu.org/software/stow/) package that
-mirrors `$HOME`.
+The repo mirrors `$HOME`.
 
-| Package | Contents |
+| Path | Contents |
 | --- | --- |
-| `hypr` | Hyprland config, split into modules (binds, rules, look, monitors, …) |
-| `quickshell` | Bar, dashboard and widgets, light and dark |
-| `rumda` | Theme and flavour switcher, scripts, wallpapers, shaders |
-| `kitty` | Terminal config and themes |
-| `nvim` | Neovim config with the rumda colourscheme |
-| `rofi` | Launcher themes for every flavour and mode |
-| `zsh` | `.zshrc` with fzf-tab, autosuggestions, zoxide |
-| `starship` | Prompt |
-| `equibop` | Discord client settings and the system24 ember theme |
-| `spicetify` | Spotify theme |
-| `gtk` | GTK 3 and 4 settings and colours |
-| `fastfetch` · `btop` · `eza` · `swappy` · `fontconfig` | Smaller tool configs |
+| `.config/hypr` | Hyprland config, split into modules (binds, rules, look, monitors, …) |
+| `.config/quickshell` | Bar, dashboard and widgets, light and dark |
+| `.config/rumda` | Theme and flavour switcher, scripts, wallpapers, shaders |
+| `.config/kitty` | Terminal config and themes |
+| `.config/nvim` | Neovim config with the rumda colourscheme |
+| `.config/rofi` | Launcher themes for every flavour and mode |
+| `.zshrc` | zsh with fzf-tab, autosuggestions, zoxide |
+| `.config/starship.toml` | Prompt |
+| `.config/equibop` | Discord client settings and the system24 ember theme |
+| `.config/spicetify` | Spotify theme |
+| `.config/gtk-3.0` · `.config/gtk-4.0` | GTK settings and colours |
+| `.config/fastfetch` · `btop` · `eza` · `swappy` · `fontconfig` | Smaller tool configs |
 
 ## Installation
 
 > [!WARNING]
-> Back up your own configs first. Stow refuses to overwrite existing files, so move
-> anything it complains about out of the way.
+> Back up your own configs first. Copying overwrites files with the same name.
 
 ```sh
-sudo pacman -S --needed git stow
 git clone https://github.com/erbator/seqbox.git ~/seqbox
-cd ~/seqbox
+
+# one app
+cp -r ~/seqbox/.config/kitty ~/.config/
 
 # everything
-stow */
-
-# or only what you want
-stow hypr quickshell rumda kitty
+cp -r ~/seqbox/.config/. ~/.config/
+cp ~/seqbox/.zshrc ~/
 ```
-
-`equibop` should be stowed with `--no-folding`. Discord keeps its session data in
-`~/.config/equibop`, so that folder has to stay a real directory:
-
-```sh
-stow --no-folding equibop
-```
-
-To remove a package's links, run `stow -D <package>`.
 
 ## Dependencies
 

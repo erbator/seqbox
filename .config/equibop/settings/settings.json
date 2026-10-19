@@ -921,8 +921,7 @@
             "enabled": false
         },
         "Questify": {
-            "enabled": false,
-            "migrationVersion": 1
+            "enabled": false
         },
         "Quoter": {
             "enabled": false
@@ -1169,7 +1168,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1792394455206
+        "settingsSyncVersion": 1792348498255
     },
     "ignoreResetWarning": false
 }
