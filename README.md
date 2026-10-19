@@ -194,6 +194,7 @@ The repo mirrors `$HOME`.
 | `.config/equibop` | Discord client settings and the system24 ember theme |
 | `.config/spicetify` | Spotify theme |
 | `.config/gtk-3.0` · `.config/gtk-4.0` | GTK settings and colours |
+| `.local/share/themes` | The `rumda-dark` and `rumda-light` GTK themes (built on adw-gtk3) |
 | `.config/fastfetch` · `btop` · `eza` · `swappy` · `fontconfig` | Smaller tool configs |
 
 ## Installation
@@ -210,6 +211,7 @@ cp -r ~/seqbox/.config/kitty ~/.config/
 # everything
 cp -r ~/seqbox/.config/. ~/.config/
 cp ~/seqbox/.zshrc ~/
+cp -r ~/seqbox/.local/share/themes ~/.local/share/
 ```
 
 ## Dependencies
@@ -218,7 +220,7 @@ cp ~/seqbox/.zshrc ~/
 paru -S --needed hyprland quickshell kitty neovim rofi thunar zsh starship \
   awww grim slurp swappy wl-clipboard wf-recorder tesseract tesseract-data-eng libnotify \
   brightnessctl playerctl fastfetch btop eza bat ripgrep fzf zoxide direnv \
-  zsh-autosuggestions fzf-tab ttf-terminus-nerd papirus-icon-theme \
+  zsh-autosuggestions fzf-tab ttf-terminus-nerd papirus-icon-theme adw-gtk-theme \
   equibop spicetify-cli
 ```
 

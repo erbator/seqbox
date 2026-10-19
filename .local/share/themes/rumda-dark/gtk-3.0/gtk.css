@@ -1,0 +1,36 @@
+@import url("file:///usr/share/themes/adw-gtk3-dark/gtk-3.0/gtk.css");
+
+/* rumda dark palette (needs adw-gtk3-dark) */
+@define-color accent_color          #d68e60;
+@define-color accent_bg_color       #c47c4f;
+@define-color accent_fg_color       #1c1612;
+
+@define-color window_bg_color       #2b221a;
+@define-color window_fg_color       #f0c997;
+@define-color view_bg_color         #1c1612;
+@define-color view_fg_color         #f0c997;
+
+@define-color headerbar_bg_color    #3d2e21;
+@define-color headerbar_fg_color    #f0c997;
+@define-color headerbar_backdrop_color #352819;
+
+@define-color sidebar_bg_color      #241c16;
+@define-color sidebar_fg_color      #f0c997;
+@define-color sidebar_backdrop_color #2b221a;
+
+@define-color card_bg_color         #2b221a;
+@define-color card_fg_color         #f0c997;
+@define-color popover_bg_color      #2b221a;
+@define-color popover_fg_color      #f0c997;
+@define-color dialog_bg_color       #2b221a;
+@define-color dialog_fg_color       #f0c997;
+
+@define-color destructive_bg_color  #be100e;
+@define-color success_bg_color      #858162;
+@define-color warning_bg_color      #d08b30;
+
+/* Match kitty: Terminess Bold everywhere */
+* {
+  font-family: "Terminess Nerd Font";
+  font-weight: bold;
+}
