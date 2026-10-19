@@ -80,6 +80,24 @@ Peach and brown on a retro striped wallpaper, with thick rounded borders.
   </tr>
 </table>
 
+### Light on resources
+
+The main flavour on a budget laptop: an Intel Core i3-10110U with integrated graphics,
+8 GB of RAM and a 1080p 60Hz screen.
+
+<img src="assets/screenshots/laptop-resources.webp" alt="Main flavour on a laptop: btop showing 1.2 GiB of RAM in use and fastfetch" width="100%">
+
+Measured a few minutes after login, with btop and fastfetch open in kitty:
+
+| | |
+| --- | --- |
+| **RAM in use** | 1.16 GiB of 7.49 GiB (15%) |
+| **CPU load** | 0.29 (1-minute average) |
+| **Power draw** | 7.4 W on battery |
+| **Hyprland** | 181 MB |
+| **Quickshell bar** | 251 MB |
+| **Packages** | 823 |
+
 ## Usage
 
 ### Switching mode and flavour
