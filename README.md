@@ -199,30 +199,65 @@ The repo mirrors `$HOME`.
 
 ## Installation
 
+For Arch-based systems (I use CachyOS) with [paru](https://github.com/Morganamilo/paru).
+
 > [!WARNING]
 > Back up your own configs first. Copying overwrites files with the same name.
 
-```sh
-git clone https://github.com/erbator/seqbox.git ~/seqbox
-
-# one app
-cp -r ~/seqbox/.config/kitty ~/.config/
-
-# everything
-cp -r ~/seqbox/.config/. ~/.config/
-cp ~/seqbox/.zshrc ~/
-cp -r ~/seqbox/.local/share/themes ~/.local/share/
-```
-
-## Dependencies
+### 1. Install the packages
 
 ```sh
-paru -S --needed hyprland quickshell kitty neovim rofi thunar zsh starship \
+paru -S --needed git hyprland quickshell kitty neovim rofi thunar zsh starship \
   awww grim slurp swappy wl-clipboard wf-recorder tesseract tesseract-data-eng libnotify \
   brightnessctl playerctl fastfetch btop eza bat ripgrep fzf zoxide direnv \
   zsh-autosuggestions fzf-tab ttf-terminus-nerd papirus-icon-theme adw-gtk-theme \
-  equibop spicetify-cli
+  equibop spicetify-cli spotify brave-bin
+chsh -s /usr/bin/zsh
 ```
+
+The Hyprland config is written in Lua, so it needs Hyprland 0.56 or newer.
+
+### 2. Copy the files
+
+```sh
+git clone https://github.com/erbator/seqbox.git ~/Documents/seqbox
+cd ~/Documents/seqbox
+cp -r .config/. ~/.config/
+cp .zshrc ~/
+mkdir -p ~/.local/share && cp -r .local/share/themes ~/.local/share/
+```
+
+To take only one app, copy just its folder, e.g. `cp -r .config/kitty ~/.config/`.
+
+The pixel flavour uses the [Dogica](https://rmocci.itch.io/dogica) font, which isn't
+included here. Put it in `~/.local/share/fonts` and run `fc-cache -f`.
+
+### 3. Adjust for your screen
+
+| File | Change |
+| --- | --- |
+| `~/.config/hypr/modules/monitors.lua` | `mode = "1920x1080@144"` → `mode = "preferred"` (or your own resolution and refresh rate) |
+| `~/.config/quickshell/shared/ScreenConf.qml` | Set `screenWidth: 1920` to your screen width, or the bar and dashboard will be sized wrong |
+| `~/.config/hypr/modules/input.lua` | Keyboard layout is `hu`. Change `kb_layout` if yours differs |
+| `~/.config/spicetify/config-xpui.ini` | Replace `/home/gegu` in `prefs_path` with your home folder |
+
+### 4. Start it up
+
+Log in to Hyprland. The bar starts on its own. Then pick a flavour and a mode:
+
+```sh
+~/.config/rumda/scripts/flavour.sh main   # or pixel / warm
+~/.config/rumda/scripts/theme.sh dark     # or light
+```
+
+**Spotify:** open Spotify once and close it, then:
+
+```sh
+sudo chmod a+wr /opt/spotify /opt/spotify/Apps -R
+spicetify backup apply
+```
+
+**Discord:** in Equibop, go to Settings → Themes and enable `system24-ember`.
 
 ## Credits
 
