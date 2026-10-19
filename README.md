@@ -2,7 +2,7 @@
 
 # seqbox
 
-**My Hyprland setup, based on [rumda](https://github.com/hexonide/rumda) by [@hexonide](https://github.com/hexonide)**
+**Seqbox, sequel to my gruvbox dots, get it? (based on [rumda](https://github.com/hexonide/rumda) by [@hexonide](https://github.com/hexonide)**
 
 ![Hyprland](https://img.shields.io/badge/Hyprland-Lua-58E1FF?style=flat-square&logo=hyprland&logoColor=white)
 ![Quickshell](https://img.shields.io/badge/Quickshell-QML-41CD52?style=flat-square&logo=qt&logoColor=white)
