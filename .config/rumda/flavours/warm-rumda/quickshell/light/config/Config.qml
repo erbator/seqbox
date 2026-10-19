@@ -1,0 +1,183 @@
+pragma Singleton
+import QtQuick
+import Quickshell
+
+import qs.shared
+
+Singleton {
+  // User Configuration
+  readonly property string username: Common.cUsername
+  readonly property string configPath: Common.cConfigPath
+  readonly property string profilePath: Common.cProfilePath
+  readonly property string fileManager: Common.cFileManager
+  readonly property string browser: Common.cBrowser
+  readonly property string terminal: Common.cTerminal
+
+  // Bar Configuration
+  property bool showLightBar: Common.cShowLightBar
+  readonly property int barMarginTop: 80
+  readonly property int barMarginBottom: 80
+  readonly property int barMarginLeft: 18
+  readonly property int barMarginRight: 1
+  readonly property int barWidth: 48
+  readonly property int barRadius: 4
+  readonly property int innerBModulesRadius: 7
+  readonly property int barBorderWidth: 2
+  readonly property int barsGrave: 1400    // where the bar goes in terms of y position when it's animated out on a themeswitch (it then gets killed)
+  // increasing it will increase animation speed. also, it kinda depends on ur screenheight
+
+  // stuff I'm using to sync the bar switch animation. plz don't mess it up
+  property int syncTbar: -(barsGrave - barMarginTop - barMarginBottom)
+  property int syncBbar: (barsGrave - barMarginTop - barMarginBottom)
+
+  // Shadow Configuration
+  readonly property bool enableBarShadow: true
+  readonly property bool enableCatShadow: false
+  readonly property int shadowOffsetX: 3
+  readonly property int shadowOffsetY: 0
+
+  // Dashboard Configuration ====================
+  readonly property int dashAnimDuration: 250
+  readonly property string githubUsername: Common.cGithubUsername
+  // dashboard size config
+  readonly property double dashboardWidth: Common.cDashboardWidth
+  readonly property double dashboardHeight: Common.cDashboardHeight
+  readonly property double dashTopRowRatio: 0.6
+
+  //  other custom properties
+  readonly property int dashRadius: 12
+  readonly property int dashBorderWidth: 3
+  readonly property int dashInnerModuleBorderWidth: 0 // me when long names
+  readonly property int dashInnerModuleRadius: 9
+  readonly property int dashInnerPadding: 10
+  readonly property int commitSquareSize: 12
+  readonly property bool dashContribToolTip: true
+
+  // shadow config for the dashboard
+  readonly property bool enableDashShadow: true
+  readonly property int dashShadowOffsetX: 3
+  readonly property int dashShadowOffsetY: 3
+  // notifications
+  readonly property int notifImageMaxHeight: 60
+  readonly property int notifShotHeight: 100
+  readonly property bool notifDynamicWidth: false
+  readonly property int notifMinWidth: 220
+  readonly property int notifWidth: 360
+  readonly property int notifTimeout: 10000
+  readonly property int notifIconSize: 56
+  readonly property int notifButtonHeight: 22
+  readonly property int notifSlideDuration: 250
+  readonly property int notifBarHeight: 3
+  readonly property int notifBarTopMargin: 8
+  readonly property int notifShadowOffsetX: 9
+  readonly property int notifShadowOffsetY: 8
+  readonly property int notifRadius: 0
+  readonly property int notifBorderWidth: 1
+  readonly property int notifMarginTop: 20
+  readonly property int notifMarginRight: 15
+  readonly property int notifSpacing: 10
+  readonly property int notifPadding: 12
+  readonly property int notifMaxVisible: 5
+  readonly property string notifFont: "Terminess Nerd Font"
+
+  // popout volume
+  readonly property int popoutVolShadowOffsetX: 0
+  readonly property int popoutVolShadowOffsetY: 0
+
+  // spotlight/zoom
+  property real zoomHoleRadius: 150
+  property real zoomMinRadius: 30
+  property real zoomMaxRadius: 600
+  property real zoomRadiusStep: 20
+  property real zoomDarkness: 0.8
+  property real zoomFeather: 0.2
+  property real zoomMin: 1.0
+  property real zoomMax: 8.0
+  property real zoomStep: 0.4
+
+  // ============================================
+
+  // Cat Configuration
+  readonly property bool enableCat: Common.cEnableCat // note: I disabled le cat momentarily because it looks weird when I switch themes
+  readonly property string catIconPath: configPath + "/light/icons/catsit.svg"
+  readonly property int catMarginTop: barMarginTop - 57
+  readonly property int catMarginLeft: -15 - barWidth //note: this is hardcoded, bind it to the bar later
+  readonly property int catWidth: 50
+  readonly property int catHeight: 90
+  property string catAnimationFolder: Quickshell.env("HOME") + "/.config/quickshell/light/icons/rumda-the-cat/gato-jump"
+  property int catAnimationFrames: 9
+  property var catFrameConfigs: [
+    {
+      marginTop: 25,
+      marginLeft: -85,
+      width: 140,
+      height: 90,
+      delay: 10,
+      rotation: 0
+    },
+    {
+      marginTop: 20,
+      marginLeft: -90,
+      width: 140,
+      height: 92,
+      delay: 25,
+      rotation: 0
+    },
+    {
+      marginTop: 15,
+      marginLeft: -90,
+      width: 140,
+      height: 94,
+      delay: 25,
+      rotation: 14
+    },
+    {
+      marginTop: 13,
+      marginLeft: -90,
+      width: 150,
+      height: 96,
+      delay: 25,
+      rotation: 14
+    },
+    {
+      marginTop: 15,
+      marginLeft: -115,
+      width: 160,
+      height: 98,
+      delay: 30,
+      rotation: 0
+    },
+    {
+      marginTop: 9,
+      marginLeft: -120,
+      width: 170,
+      height: 96,
+      delay: 30,
+      rotation: 0
+    },
+    {
+      marginTop: 2,
+      marginLeft: -150,
+      width: 180,
+      height: 94,
+      delay: 25,
+      rotation: 0
+    },
+    {
+      marginTop: -6,
+      marginLeft: -170,
+      width: 190,
+      height: 92,
+      delay: 20,
+      rotation: 0
+    },
+    {
+      marginTop: -16,
+      marginLeft: -190,
+      width: 200,
+      height: 90,
+      delay: 20,
+      rotation: 0
+    }
+  ]
+}

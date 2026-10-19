@@ -1,0 +1,12 @@
+configuration {
+  modi:                "drun,run,window";
+  show-icons:          true;
+  icon-theme:          "Papirus";
+  font:                "Terminess Nerd Font Bold 12";
+  drun-display-format: "{name}";
+  display-drun:        "apps";
+  display-run:         "run";
+  display-window:      "windows";
+}
+
+@theme "~/.config/rofi/current.rasi"

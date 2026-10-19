@@ -1,0 +1,8 @@
+# secrets and app state that must never be committed
+.config/gh/
+.config/equibop/sessionData/
+.config/equibop/MessageLoggerData/
+.config/equibop/Crashpad/
+.config/equibop/Singleton*
+*.bak
+.DS_Store

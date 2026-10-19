@@ -1,0 +1,5 @@
+[Default]
+save_dir=$HOME/Documents/Screen
+save_filename_format=screenshot-%Y%m%d-%H%M%S.png
+text_font=Terminess Nerd Font Bold
+text_size=12

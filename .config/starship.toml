@@ -1,0 +1,21 @@
+# prompt is just [user@host] [folder] in bold, terminal's own text color
+add_newline = false
+format = '[\[](bold)$username[@](bold)$hostname[\]](bold)${custom.dir} '
+
+[username]
+show_always = true
+style_user = "bold"
+style_root = "bold"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold"
+format = "[$hostname]($style)"
+
+# current folder name, hidden in the home folder
+[custom.dir]
+command = 'basename "$PWD"'
+when = '[ "$PWD" != "$HOME" ]'
+shell = ["sh"]
+format = '[ \[$output\]](bold)'

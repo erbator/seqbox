@@ -1,0 +1,15 @@
+@import "~/.config/rofi/base.rasi"
+
+* {
+  bg:           #F5DCC6;
+  bg-alt:       #EDD0B6;
+  bg-sel:       #E6C0A1;
+  fg:           #45373c;
+  fg-dim:       #968c83;
+  accent:       #97522c;
+  urgent:       #be100e;
+  border-col:   #97522c;
+  border-w:     2px;
+  radius:       0px;
+  inner-radius: 0px;
+}

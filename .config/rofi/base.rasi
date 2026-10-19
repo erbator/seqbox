@@ -1,0 +1,80 @@
+/* rumda rofi layout — colors/shape come from themes/<flavour>-<mode>.rasi */
+* {
+  background-color: transparent;
+  text-color:       @fg;
+  margin:  0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width:            560px;
+  background-color: @bg;
+  border:           @border-w;
+  border-color:     @border-col;
+  border-radius:    @radius;
+}
+
+mainbox {
+  padding:  12px;
+  spacing:  10px;
+  children: [ inputbar, listview ];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  border-radius:    @inner-radius;
+  padding:          8px 10px;
+  spacing:          8px;
+  children:         [ prompt, entry ];
+}
+
+prompt {
+  text-color: @accent;
+}
+
+entry {
+  placeholder:       "search...";
+  placeholder-color: @fg-dim;
+  cursor:            text;
+}
+
+listview {
+  lines:        8;
+  columns:      1;
+  fixed-height: true;
+  scrollbar:    false;
+  spacing:      2px;
+}
+
+element {
+  border-radius: @inner-radius;
+  padding: 6px 10px;
+  spacing: 10px;
+}
+
+element-icon {
+  size:   20px;
+  cursor: inherit;
+}
+
+element-text {
+  vertical-align: 0.5;
+  cursor:         inherit;
+  text-color:     inherit;
+}
+
+element selected.normal {
+  background-color: @bg-sel;
+  text-color:       @accent;
+}
+
+element urgent,
+element selected.urgent {
+  text-color: @urgent;
+}
+
+element active,
+element selected.active {
+  text-color: @accent;
+}

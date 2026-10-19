@@ -1,0 +1,165 @@
+/**
+ * @name system24 ember
+ * @description system24 with kitty dark theme colors.
+ * @author refact0r
+ * @version 2.1.0
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24.theme.css
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    /* font, change to '' for default discord font */
+    --font: 'Terminess Nerd Font Mono';
+    --code-font: 'Terminess Nerd Font Mono';
+    font-weight: 700; /* text font weight. DOES NOT AFFECT BOLD TEXT */
+    letter-spacing: 0; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: off; /* off: default window controls, on: custom window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button options */
+    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-subtle); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+
+    /* background image options */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+    /* other options */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+
+    /* unrounding options */
+    --unrounding: on; /* off: default, on: remove rounded corners from panels */
+    --round-pfp: off; /* off: square profile pictures, on: rounded profile pictures (Discord default) */
+    --remove-pfp-decor: off; /* off: default, on: remove profile picture decorations */
+
+    /* styling options */
+    --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
+    --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
+    --ascii-loader: system24; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
+
+    /* panel labels */
+    --panel-labels: on; /* off: default, on: add labels to panels */
+    --label-color: var(--text-muted); /* color of labels */
+    --label-font-weight: 500; /* font weight of labels */
+}
+
+/* color options, taken from ~/.config/kitty/themes/dark.conf */
+:root {
+    --colors: on; /* off: discord default colors, on: custom colors */
+
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: #F5DCC6; /* other normally white text (color15) */
+    --text-2: #F5DCC6; /* headings and important text */
+    --text-3: #f0c997; /* normal text (foreground) */
+    --text-4: #968c83; /* icon buttons and channels (color7) */
+    --text-5: #5e5252; /* muted channels/chats and timestamps (color8) */
+
+    /* background and dark colors */
+    --bg-1: #3a2c24; /* dark buttons when clicked */
+    --bg-2: #2e231c; /* dark buttons */
+    --bg-3: #241c17; /* spacing, secondary elements */
+    --bg-4: #1C1612; /* main background color (background) */
+    --hover: rgb(120 77 55 / 0.25); /* channels and buttons when hovered (selection_background) */
+    --active: rgb(120 77 55 / 0.45); /* channels and buttons when clicked or selected */
+    --active-2: rgb(120 77 55 / 0.6); /* extra state for transparent buttons */
+    --message-hover: var(--hover); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--orange-1); /* links and other accent text */
+    --accent-2: var(--orange-2); /* small accent elements */
+    --accent-3: var(--orange-3); /* accent buttons */
+    --accent-4: var(--orange-4); /* accent buttons when hovered */
+    --accent-5: var(--orange-5); /* accent buttons when clicked */
+    --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #40a258 for default */
+    --dnd: var(--red-2); /* change to #d83a41 for default */
+    --idle: var(--yellow-2); /* change to #cc954c for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --offline: var(--text-4); /* change to #82838b for default offline color */
+
+    /* border colors */
+    --border-light: var(--hover); /* general light border color */
+    --border: var(--active); /* general normal border color */
+    --border-hover: var(--accent-2); /* border color of panels when hovered */
+    --button-border: rgb(240 201 151 / 0.1); /* neutral border color of buttons */
+
+    /* base colors: each scale is built around one kitty color */
+    --orange-1: color-mix(in oklch, #D68E60, white 20%); /* cursor */
+    --orange-2: #D68E60;
+    --orange-3: color-mix(in oklch, #D68E60, black 10%);
+    --orange-4: color-mix(in oklch, #D68E60, black 20%);
+    --orange-5: color-mix(in oklch, #D68E60, black 30%);
+
+    --red-1: color-mix(in oklch, #be100e, white 35%); /* color1 */
+    --red-2: color-mix(in oklch, #be100e, white 20%);
+    --red-3: #be100e;
+    --red-4: color-mix(in oklch, #be100e, black 10%);
+    --red-5: color-mix(in oklch, #be100e, black 20%);
+
+    --green-1: color-mix(in oklch, #858162, white 30%); /* color2 */
+    --green-2: color-mix(in oklch, #858162, white 15%);
+    --green-3: #858162;
+    --green-4: color-mix(in oklch, #858162, black 10%);
+    --green-5: color-mix(in oklch, #858162, black 20%);
+
+    --blue-1: color-mix(in oklch, #426a79, white 35%); /* color4 */
+    --blue-2: color-mix(in oklch, #426a79, white 20%);
+    --blue-3: #426a79;
+    --blue-4: color-mix(in oklch, #426a79, black 10%);
+    --blue-5: color-mix(in oklch, #426a79, black 20%);
+
+    --yellow-1: color-mix(in oklch, #d08b30, white 20%); /* color3 */
+    --yellow-2: #d08b30;
+    --yellow-3: color-mix(in oklch, #d08b30, black 10%);
+    --yellow-4: color-mix(in oklch, #d08b30, black 20%);
+    --yellow-5: color-mix(in oklch, #d08b30, black 30%);
+
+    --purple-1: color-mix(in oklch, #97522c, white 35%); /* color5 */
+    --purple-2: color-mix(in oklch, #97522c, white 20%);
+    --purple-3: #97522c;
+    --purple-4: color-mix(in oklch, #97522c, black 10%);
+    --purple-5: color-mix(in oklch, #97522c, black 20%);
+}
