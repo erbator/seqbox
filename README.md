@@ -59,6 +59,12 @@
 
 <img src="assets/screenshots/laptop-resources.webp" alt="Main flavour on a laptop: btop showing 1.2 GiB of RAM in use and fastfetch" width="100%">
 
+### 4K display
+
+**3840×2160 at 1.25× scale**, main flavour in dark mode.
+
+<img src="assets/screenshots/main-dark-4k.webp" alt="Main dark on a 4K display: Spotify, btop, fastfetch, Thunar, yazi and Neovim" width="100%">
+
 ## Usage
 
 ```sh
